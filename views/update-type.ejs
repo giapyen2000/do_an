@@ -1,0 +1,29 @@
+<%- include('common/header'); -%>
+<form action="/update-types/<%= data._id %>" method="POST">
+    <h3>Update Type</h3>
+
+    <hr>
+
+    <!-- Title Type -->
+    <div class="form-group">
+        <label for="exampleInputTitle">Title Type</label>
+        <input type="text" class="form-control" id="title" name="title" aria-describedby="title" value="<%= data.title %>"
+            placeholder="Enter title">
+    </div>
+
+    <!-- Active -->
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Active</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="active">
+                <option <%= data.active == 'active' ? 'selected' : ''%>>active</option>
+                <option <%= data.active == 'inactive' ? 'selected' : ''%>>inactive</option>
+        </select>
+    </div>
+
+    <hr>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-warning float-right">Update</button>
+    <a href="/types" class="btn btn-secondary">Cancel</a>
+</form>
+<%- include('common/footer'); -%>

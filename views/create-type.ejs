@@ -1,0 +1,29 @@
+<%- include('common/header'); -%>
+<form action="/create-types" method="POST">
+    <h3>Create Type</h3>
+
+    <hr>
+
+    <!-- Title Type -->
+    <div class="form-group">
+        <label for="exampleInputTitle">Title Type</label>
+        <input type="text" class="form-control" id="title" name="title"
+            placeholder="Enter title">
+    </div>
+
+    <!-- Active -->
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Active</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="active">
+                <option>active</option>
+                <option>inactive</option>
+        </select>
+    </div>
+
+    <hr>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-warning float-right">Create</button>
+    <a href="/types" class="btn btn-secondary">Cancel</a>
+</form>
+<%- include('common/footer'); -%>

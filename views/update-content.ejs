@@ -1,0 +1,64 @@
+<%- include('common/header'); -%>
+<form action="/update-contents/<%= data._id %>" method="POST" class="mb-5 mt-3">
+    
+    <!-- Type New -->
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Type New</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="typeNew" value="<%= data.typeNew %>">
+            <% types.forEach(item => { %>
+                <option <%= data.typeNew == item.title ? 'selected' : ''%>><%=item.title%></option>
+            <% }) %>
+        </select>
+    </div>
+
+    <!-- Title -->
+    <div class="form-group">Title Content</label>
+        <input type="text" class="form-control" name="title" value="<%= data.title %>">
+    </div>
+
+    <!-- Detail -->
+    <div class="form-group">Detail</label>
+        <input type="text" class="form-control" name="detail" value="<%= data.detail %>">
+    </div>
+    
+    <!-- Link Image Show -->
+    <div class="form-group">Link Image Show</label>
+        <input type="text" class="form-control" name="imageShow" value="<%= data.imageShow %>">
+    </div>
+
+    <!-- Content -->
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Content</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+            name="content"><%= data.content %></textarea>
+    </div>
+
+    <!-- Link Image Content -->
+    <div class="form-group">Link Image Content</label>
+        <input type="text" class="form-control" name="imageContent" value="<%= data.imageContent %>">
+    </div>
+
+    <!-- Content More -->
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Content More</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+            name="contentMore"><%= data.contentMore %></textarea>
+    </div>
+
+    <!-- Active -->
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Active</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="active">
+                <option <%= data.active == 'active' ? 'selected' : ''%>>active</option>
+                <option <%= data.active == 'inactive' ? 'selected' : ''%>>inactive</option>
+        </select>
+    </div>
+
+    <hr class="mb-5 mt-5">
+
+    <!-- Submit Button -->
+    <a href="/contents" class="btn btn-secondary">Cancel</a>
+    <button type="submit" class="btn btn-warning float-right">Update</button>
+
+</form>
+<%- include('common/footer'); -%>

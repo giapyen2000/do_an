@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <style>
+        .container-fluid {
+            padding-left: 0px !important;
+            flex-wrap: wrap;
+            padding-right: 0px !important;
+        }
+
+        .head-index {
+            position: relative;
+
+        }
+
+        .block {
+
+            display: flex;
+            position: absolute;
+        }
+
+        .head-index .block img.imgage {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        img.imgage {
+            margin-left: 20%;
+            width: 7%;
+        }
+
+        img {
+            width: 100px;
+            height: 100%;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .bigBlock {
+            width: 100%;
+            height: 20%;
+        }
+
+        .figure-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        a.text {
+            color: black;
+        }
+
+        a.text:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        a.texts {
+            color: black;
+        }
+
+        a.texts:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        .Smallmenu {
+            display: flex;
+            margin-bottom: 5%;
+        }
+
+        .blockOrange {
+            width: 4px;
+            height: 30px;
+            background-color: rgb(231, 67, 7);
+        }
+
+        h4 {
+            text-align: left !important;
+            ;
+        }
+
+        .bar h5 {
+            padding: 3px 5px 5px 5px;
+        }
+
+        .map {
+            display: flex;
+            text-decoration: none;
+        }
+
+        .map:hover {
+            text-decoration: none;
+        }
+
+        .change.ms {
+
+            height: 70px !important;
+            background: #fa931e !important;
+            width: 100%;
+            position: relative !important;
+        }
+
+        .hidden.changes {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        @media(max-width:600px) {
+
+            /* .container  {
+        visibility: hidden;
+    
+    } */
+            /* p.a{
+        visibility: hidden;
+    } 
+    */
+            .texts {
+                visibility: hidden;
+            }
+
+            .society {
+                display: inline !important;
+            }
+
+            .line {
+                margin-top: 0px;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid  " style="margin-left: auto;margin-right: auto;">
+
+        <div class="headSmall fixed-top">
+            <div class="head_index"
+                style="padding-right:0px;padding-left:0px;height: 100px; background-color: rgb(247, 118, 12);">
+
+                <div class="block" style="width:100%">
+                    <img class="imgage"
+                        src="https://i2.wp.com/nguyenngoclong.com/blog/wp-content/uploads/2018/08/logo-kenh14.jpg?fit=300%2C300&ssl=1 "
+                        alt="">
+                    <div class="blockSmall" style="width:180px; padding: 20px 10px 10px 10px;">
+                        <h4 style="color: cornsilk;">kênh 14.vn </h4>
+                        <p style="font-size: 11px;color: cornsilk;"> Kênh giải trí và xã hội</p>
+                    </div>
+                    <p style="padding: 30px 20px 20px 20px;color: cornsilk;"> Thông tin cập nhật 24h nhanh chóng, chính
+                        xác
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Start Nav -->
+            <nav class="navbar navbar-expand-sm navbar-light bg-warning  change ">
+                <a class="navbar-brand" style="margin-left:20%" href="/show-contents"><i class="fa fa-home"
+                        aria-hidden="true"></i></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <% menu.forEach(items => {%>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/show-content?search=<%= items.title %>"><%= items.title%><span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <% }) %>
+                    </ul>
+
+                </div>
+            </nav>
+            <!-- End Nav -->
+
+        </div>
+
+    </div>
+    <!-- start body -->
+    <div class="container" style="margin-top:14%;">
+
+        <div class="row" style="margin-left:15%;width: 70%;">
+
+            <h4 style="margin-top: 4%;">
+                <%= da.title %>
+            </h4>
+
+            <p style="margin-top: 4%;">
+                <%= da.detail %>
+            </p>
+
+
+            <img style="width: 100%;height: 100%;" src="<%= da.imageShow %>" alt="">
+            <p style="margin-top: 4%;">
+                <%= da.content %>
+            </p>
+
+            <img style="width: 100%;height: 100%;" src="<%= da.imageContent %>" alt="">
+            <p style="margin-top: 4%;">
+                <%= da.contentMore %>
+            </p>
+        </div>
+    </div>
+        <!-- Show Content -->
+
+        <!-- Footer -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <a class="navbar-brand" style="margin-left:20%" href="#"><i class="fa fa-home"
+                        aria-hidden="true"></i></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Star <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">TVshow</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">cine <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">beautiful & fashion</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">đời sống <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">thể thao <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">thế giới <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">xã hội</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">học đường</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">video</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+        <div class="container-fluid" style="background-color: orange;">
+            <div class="container">
+                <div class="footer" style="display:flex; margin-top:0%;margin-left: 5%;margin-right: auto;">
+                    <div class="col-sm-4" style="margin-top: 5%;">
+                        <h5>TRỤ SỞ HÀ NỘI</h5>
+                        <p>Tầng 21, tòa nhà Center Building, Hapulico Complex, số 1 Nguyễn Huy Tưởng, p. Thanh Xuân
+                            Trung,
+                            quận Thanh Xuân, Hà Nội. Điện thoại: 024 7309 5555, máy lẻ 370.</p>
+                        <div class="map">
+                            <i style="padding: 13px 10px 10px 10px;" class="fa fa-map-marker" aria-hidden="true"></i>
+                            <a class="text" style="padding: 10px 10px 10px 10px;" href="">xem bản đồ </a>
+                        </div>
+                        <h5>TRỤ SỞ TP HCM</h5>
+                        <p> Tầng 4 Tòa nhà 123, 123 Võ Văn Tần, phường 6, quận 3, Tp. HCM Điện thoại: 028. 7307 7979.
+                        </p>
+                        <div class="map">
+                            <i style="padding: 13px 10px 10px 10px;" class="fa fa-map-marker" aria-hidden="true"></i>
+                            <a class="text" style="padding: 10px 10px 10px 10px;" href="">xem bản đồ </a>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-4" style="margin-top: 5%;">
+                        <h5>Chịu trách nghiệm quản lí nội dung </h5>
+                        <p>Giáp Thị Yến </p>
+                        <h6>Hợp tác truyền thông </h6>
+                        <div class="tele" style="display: flex;">
+                            <p>SDT:</p>
+                            <i style="margin-top:3px;" class="fa fa-phone" aria-hidden="true"></i>
+                            <a class="text" style="margin-left:5px" href="tel:+84334066672">0334066672</a>
+
+                        </div>
+                        <div class="gmail" style="display: flex;">
+                            <p>Gmail:</p>
+                            <i style="margin-top:3px;margin-left: 5px" class="fa fa-envelope" aria-hidden="true"></i>
+                            <a class="text" style="margin-left:5px;margin-right: 5px; "
+                                href="mailto: giapthiyenvyvtbg@gmail.com">giapthiyenvyvtbg@gmail.com</a>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-4" style="margin-top: 5%;">
+                        <h4>vận hành bởi kika yến</h4>
+                        <p>Tầng 17, 19, 20, 21 Tòa nhà Center Building - Hapulico Complex, Số 1 Nguyễn Huy Tưởng, Thanh
+                            Xuân, Hà Nội.</p>
+                        <p>Giấy phép số 2215/GP-TTĐT do Sở Thông tin và Truyền thông Hà Nội cấp ngày 10 tháng 4 năm 2019
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var menu = document.querySelector('.change');
+                var status = "duoi";
+
+
+
+                window.addEventListener('scroll', function () {
+                    console.log(window.pageYOffset);
+
+                    if (window.pageYOffset > 100) {
+                        if (status == "duoi") {
+                            status = "tren";
+                            console.log('hehhe');
+                            menu.classList.add('ms');
+                        }
+                    } else if (window.pageYOffset < 100) {
+                        if (status == "tren") {
+                            status = "duoi";
+                            menu.classList.remove('ms');
+                        }
+
+
+
+                    }
+                })
+
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                var changed = document.querySelector('.head_index');
+                var status = 'on';
+                window.addEventListener('scroll', function () {
+                    if (window.pageYOffset < 100) {
+                        if (status == 'on') {
+                            status = 'in';
+                            changed.classList.remove("blockSmall");
+
+                            changed.classList.remove("imgage");
+                            changed.classList.remove("block");
+                            changed.classList.remove("head_index");
+                        }
+                    } else if (window.pageYOffset > 100) {
+                        if (status == 'in') {
+                            status = 'on';
+                            changed.classList.add("blockSmall");
+
+                            changed.classList.add("imgage");
+                            changed.classList.add("block");
+                            changed.classList.add("head_index");
+                        }
+                    }
+                })
+            })
+        </script>
+</body>
+
+</html>

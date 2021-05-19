@@ -1,0 +1,11 @@
+version: "3.1"
+services: 
+    app:
+        image: testt
+        container_name: testt-running
+        ports:
+            - 9000:3000
+        environment: 
+            - PORT=3000
+            # - ROOT_PATH=/home
+            # - DB_MONGO_URL=mongodb+srv://rp_auth_account:eB7RoQ6ogAegbhxRV3@altitude-dev-uzz6v.mongodb.net/maintainance?retryWrites=true
