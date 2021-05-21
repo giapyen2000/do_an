@@ -3,12 +3,12 @@ const app = express();
 const path = require("path");
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
-const port = 3000;
+const DB_MONGO_URL = 'mongodb://localhost/mongoose';
 const routes = require('./routers');
 
 //mongodb+srv://vu:abcd12345@cluster0.6qjzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 // Connect database
-mongoose.connect('mongodb://localhost/mongoose', {
+mongoose.connect(DB_MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
