@@ -4,7 +4,8 @@ require('dotenv').config();
 const path = require("path");
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
-const DB_MONGO_URL = 'mongodb://localhost/mongoose';
+// const DB_MONGO_URL = 'mongodb://localhost/mongoose';
+const DB_MONGO_URL = 'mongodb+srv://khiemvu:abcd12345@cluster0.6qjzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const routes = require('./routers');
 
 //mongodb+srv://vu:abcd12345@cluster0.6qjzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

@@ -34,7 +34,7 @@ router.post('/update-contents/:id', checkAuth, updateContentController);
 router.post('/delete-contents/:id', checkAuth, removeContentController);
 
 // Show Content
-router.get(process.env["ROOT_PATH"], showAllContentController);
+router.get(process.env["PORT"], showAllContentController);
 // show 
 router.get('/show-content', showAlls);
 //  showOne
