@@ -7,5 +7,5 @@ services:
             - 9000:3000
         environment: 
             - PORT=3000
-            # - ROOT_PATH=/home
+             - ROOT_PATH=/show-contents
              - DB_MONGO_URL='mongodb://localhost/mongoose';
