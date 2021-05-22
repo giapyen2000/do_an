@@ -1,16 +1,16 @@
+require('dotenv').config();
 const express = require("express")
 const app = express();
-require('dotenv').config();
 const path = require("path");
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 // const DB_MONGO_URL = 'mongodb://localhost/mongoose';
-const DB_MONGO_URL = 'mongodb+srv://yengiap:gxzEnFnsRuzwaaa9@cluster0.b0tm3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const urldb = process.env['DB_MONGO_URL'];
 const routes = require('./routers');
 
 //mongodb+srv://vu:abcd12345@cluster0.6qjzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 // Connect database
-mongoose.connect(DB_MONGO_URL, {
+mongoose.connect(urldb, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
