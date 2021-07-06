@@ -196,7 +196,7 @@ module.exports.showOne = async (req, res) => {
 
         let item = await content.findById(id);
         let types = await type.find();
-
+        item.click = (item.click ? item.click : 0) + 1;
         let menu = await type.find({
             active: 'active'
         });

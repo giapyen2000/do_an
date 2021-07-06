@@ -23,6 +23,10 @@ const Content = new Schema({
     contentMore: {
         type: String,
     },
+    click: {
+        type:Number,
+        default: 0,
+    },
     active: {
         type: String,
         enum: ['active', 'inactive']

@@ -4,8 +4,8 @@ services:
         image: testt
         container_name: testt-running
         ports:
-            - 9000:3000
+            - 9000:5000
         environment: 
-            - PORT=3000
+            - PORT=5000
             #  - ROOT_PATH=/show-contents
              - DB_MONGO_URL='mongodb+srv://khiemvu:abcd12345@cluster0.6qjzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
